@@ -20,9 +20,9 @@ export default function() {
       value = stackValue;
 
   function stack(data) {
-    var sz = Array.from(keys.apply(this, arguments), stackSeries),
-        i, n = sz.length, j = -1,
-        oz;
+    
+    var sz = keys().map(stackSeries)
+    var i, n = sz.length, j = -1, oz;
 
     for (const d of data) {
       for (i = 0, ++j; i < n; ++i) {
